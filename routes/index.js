@@ -3,7 +3,7 @@ var Glass = require('../models/models');
 module.exports.count = function(req, res, next) {
 	var username = req.params.username;
 	var lastDay = new Date(new Date() - 86400000);
-	Glass.find({$and: [{timestamp: {$gte: lastDay }}, {username: username}]}, function(err, glasses) {
+	Glass.find({$and: [{timestamp: {$gte: lastDay }}, {username: username.toUpperCase()}]}, function(err, glasses) {
 		if (err) res.status(500).json({'errorMessage': err});
 
 		var results = {};
