@@ -1,0 +1,28 @@
+extends layout
+
+block content
+    .top.bar
+        .content
+            | SEND A YO TO
+    .second.bar
+        .content
+            | YOWATER
+    .third.bar
+        .content
+            | WHEN YOU
+    .fourth.bar
+        .content
+            | DRINK A GLASS
+    .fifth.bar
+        .content
+    .sixth.bar
+        .content
+            | THEN:
+    .seventh.bar
+        .content
+            form(name="yo", action="/api/glasses", method="GET")
+                    input(type="text", name="q", placeholder="YOUR YO USERNAME")
+                    input(type="submit", value="SUBMIT")
+    .bottom.bar
+        .content
+            a(href="/about") (About)

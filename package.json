@@ -1,0 +1,28 @@
+{
+  "name": "YOWATER",
+  "version": "1.0.0",
+  "description": "Log your water intake with Yo's!",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/davewalk/YOWATER"
+  },
+  "keywords": [
+    "Yo",
+    "water"
+  ],
+  "author": "Dave Walk",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/davewalk/YOWATER/issues"
+  },
+  "homepage": "https://github.com/davewalk/YOWATER",
+  "dependencies": {
+    "express": "^4.6.1",
+    "mongoose": "^3.8.13"
+  }
+}

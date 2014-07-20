@@ -1,0 +1,147 @@
+body {
+	font-family: 'Maven Pro', sans-serif;
+}
+
+a {
+	text-decoration: none;
+	color: #fff;
+}
+
+.bar {
+	position: fixed;
+	left: 0;
+	right: 0;
+	height: 12.5%;
+	display: table;
+	width: 100%;
+}
+
+.content {
+	vertical-align: middle;
+	text-align: center;
+	display: table-cell;
+	font-size: 72px;
+	color: white;
+}
+
+input[type=text] {
+   width: 400px;
+   height: 80px;
+   text-align: center;
+   padding: 10px;
+   font-size: 38px;
+   background-color: #1A82A7;
+   border: 0;
+   color: #fff;
+}
+
+input[type=submit] {
+	background-color: #1A82A7;
+	color: #fff;
+	height: 100px;
+	font-size: 36px;
+	margin-left: 20px;
+	border: 0;
+}
+
+.top {
+	top: 0;
+	background-color: #00A277;
+}
+
+.bottom {
+	bottom: 0;
+	background-color: #F6C342;
+}
+
+.second {
+	top: 12.5%;
+	background-color: #F6C342;
+}
+
+.third {
+	top: 25%;
+	background-color: #1A82A7;
+}
+
+.fourth {
+	top: 37.5%;
+	background-color: #A0479A;
+}
+
+.fifth {
+	top: 50%;
+	background-color: #00A277;
+}
+
+.sixth {
+	top: 62.5%;
+	background-color: #A0479A;
+}
+
+.seventh {
+	top: 75%;
+	background-color: #1A82A7;
+}
+
+.drank-0 {
+	background-color: #1a82a7;
+}
+
+.drank-1 {
+	background-color: #1f9ac7;
+}
+
+.drank-2 {
+	background-color: #23acdc;
+}
+
+.drank-3 {
+	background-color: #39b4e0;
+}
+
+.drank-4 {
+	background-color: #4fbce3;
+}
+
+.drank-5 {
+	background-color: #65c5e7;
+}
+
+.drank-6 {
+	background-color: #7bcdea;
+}
+.drank-7 {
+	background-color: #91d5ed;
+}
+
+.empty {
+	background-color: #A0479A;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 600px) {
+	.bar .content {
+		font-size: 38px;
+	}
+
+	input[type=text] {
+	   width: 160px;
+	   height: 80px;
+	   font-size: 15px;
+	}
+
+input[type=submit] {
+		background-color: #1A82A7;
+		color: #fff;
+		height: 100px;
+		font-size: 28px;
+		margin-left: 20px;
+		border: 0;
+	}
+}
+
+@media only screen and (min-device-width: 960px) and (max-device-width: 1023px) {
+	.bar .content {
+		font-size: 66px;
+	}
+}
