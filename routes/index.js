@@ -19,6 +19,9 @@ module.exports.count = function(req, res, next) {
 };
 
 module.exports.add = function(req, res, next) {
+	if (req.headers.host !== process.env.YO_HOST) {
+		res.status(403).json({'sorry': 'Yo requests should only come from YO itself'});
+	}
 	var glass = new Glass({username: req.param('username'), timestamp: new Date()});
 	glass.save(function(err, req) {
 		if (err) console.log('unable to save Yo!');
