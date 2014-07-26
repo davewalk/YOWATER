@@ -24,12 +24,14 @@ db.once('open', function() {
 	});
 
 	app.get('/api/water', routes.add);
-	app.get('/:username', routes.count);
 
 	app.get('/api/glasses', function(req, res, next) {
 		var username = req.query.q.toUpperCase();
-		res.redirect(301, '../' + username);
+		var hours = req.query.hours || '';
+		res.redirect(301, '../' + username + '/' + hours);
 	});
+
+	app.get('/:username/:hours?', routes.count);
 
 	app.get('/*', function(req, res, next) {
 		res.render('index');

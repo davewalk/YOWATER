@@ -1,8 +1,10 @@
 var Glass = require('../models/models');
 
 module.exports.count = function(req, res, next) {
+	var hours = req.params.hours || 24;
 	var username = req.params.username;
-	var lastDay = new Date(new Date() - 86400000);
+	var sinceHours = 3600000 * hours;
+	var lastDay = new Date(new Date() - sinceHours);
 	Glass.find({$and: [{timestamp: {$gte: lastDay }}, {username: username.toUpperCase()}]}, function(err, glasses) {
 		if (err) res.status(500).json({'errorMessage': err});
 
@@ -14,7 +16,7 @@ module.exports.count = function(req, res, next) {
 		for (var i = glasses.length; i < 8; i++) {
 			results[i] = 'empty';
 		}
-		res.render('glasses', {results: results, count: glasses.length});
+		res.render('glasses', {results: results, count: glasses.length, hours: hours});
 	});
 };
 

@@ -30,7 +30,7 @@ input[type=text] {
    text-align: center;
    padding: 10px;
    font-size: 38px;
-   background-color: #1A82A7;
+   background-color: #A0479A;
    border: 0;
    color: #fff;
 }
@@ -119,6 +119,16 @@ input[type=submit] {
 	background-color: #A0479A;
 }
 
+#hours {
+	height: 80px;
+	width: 400px;
+	background-color: #1A82A7;
+	border: 0;
+	color: #fff;
+	font-size: 36px;
+	text-align: center;
+}
+
 @media only screen and (min-device-width: 320px) and (max-device-width: 600px) {
 	.bar .content {
 		font-size: 38px;
@@ -130,10 +140,16 @@ input[type=submit] {
 	   font-size: 15px;
 	}
 
-input[type=submit] {
+	#hours {
+		width: 160px;
+		height: 80px;
+		font-size: 15px;
+	}
+
+	input[type=submit] {
 		background-color: #1A82A7;
 		color: #fff;
-		height: 100px;
+		height: 90px;
 		font-size: 28px;
 		margin-left: 20px;
 		border: 0;
