@@ -16,5 +16,8 @@ block content
 		.content LAST
 	div(class="seventh bar #{results[1]}")
 		.content #{hours}
-	div(class="bottom bar #{results[0]}")
-		.content HOURS
+		div(class="bottom bar #{results[0]}")
+			if hours != "1"
+				.content HOURS
+			else
+				.content HOUR
